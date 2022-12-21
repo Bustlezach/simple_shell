@@ -9,7 +9,7 @@
 
 int _putchar(int c)
 {
-    return (write(STDOUT_FILENO, &c, 1));
+	return (write(STDOUT_FILENO, &c, 1));
 }
 
 
@@ -23,9 +23,8 @@ int _putchar(int c)
 
 int print(char *str)
 {
-    int n_bytes = _strlen(str);
+	int n_bytes = _strlen(str);
 
-    return (write(STDOUT_FILENO, str, n_bytes));
+	return (write(STDOUT_FILENO, str, n_bytes));
 }
-
 

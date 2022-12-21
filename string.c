@@ -9,15 +9,15 @@
 
 int _strlen(const char *s)
 {
-    int i = 0;
+	int i = 0;
 
-    if (!s)
-        return (0);
+	if (!s)
+		return (0);
 
-    while (*s++)
-        i++;
+	while (*s++)
+		i++;
 
-    return (i);
+	return (i);
 }
 
 
@@ -33,14 +33,14 @@ int _strlen(const char *s)
 
 char *_strstr(char *haystack, char *needle)
 {
-    while (*haystack)
-    {
-        if ((*haystack == *needle) && cmp(haystack, needle))
-            return (haystack);
-        haystack++;
-    }
+	while (*haystack)
+	{
+		if ((*haystack == *needle) && cmp(haystack, needle))
+			return (haystack);
+		haystack++;
+	}
 
-    return (NULL);
+	return (NULL);
 }
 
 
@@ -55,14 +55,14 @@ char *_strstr(char *haystack, char *needle)
 
 char *_strcpy(char *dest, const char *src)
 {
-    char *temp = dest;
+	char *temp = dest;
 
-    while (*src)
-        *temp++ = *src++;
+	while (*src)
+		*temp++ = *src++;
 
-    *temp = '\0';
+	*temp = '\0';
 
-    return (dest);
+	return (dest);
 }
 
 
@@ -76,15 +76,15 @@ char *_strcpy(char *dest, const char *src)
 
 char *_strcat(char *dest, const char *src)
 {
-    int len_dest, i = 0;
+	int len_dest, i = 0;
 
-    len_dest = _strlen(dest);
+	len_dest = _strlen(dest);
 
-    while (src[i])
-        dest[len_dest++] = src[i++];
-    dest[len_dest] = '\0';
+	while (src[i])
+		dest[len_dest++] = src[i++];
+	dest[len_dest] = '\0';
 
-    return (dest);
+	return (dest);
 }
 
 
@@ -98,13 +98,12 @@ char *_strcat(char *dest, const char *src)
 
 int _strcmp(char *s1, char *s2)
 {
-    int i;
+	int i;
 
-    for (i = 0; s1[i]; i++)
-        if (s1[i] != s2[i])
-            return (s1[i] - s2[i]);
+	for (i = 0; s1[i]; i++)
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 
-    return (0);
+	return (0);
 }
-
 
